@@ -15,7 +15,7 @@ document.getElementById('calculateBtn').addEventListener('click', function () {
           return;
      }
 
-     // বছর, মাস, দিন হিসাব করা হচ্ছে
+     // calculate year, month, day
      let years = specificDate.getFullYear() - dob.getFullYear();
      let months = specificDate.getMonth() - dob.getMonth();
      let days = specificDate.getDate() - dob.getDate();
@@ -30,11 +30,11 @@ document.getElementById('calculateBtn').addEventListener('click', function () {
           months += 12;
      }
 
-     // মোট দিন, সপ্তাহ, ঘন্টা, মিনিট, সেকেন্ড হিসাব করা হচ্ছে
+     // Calculate total day, weeks, hours, minutes, second
      const totalDays = Math.floor((specificDate - dob) / (1000 * 60 * 60 * 24));
      const totalWeeks = Math.floor(totalDays / 7);
-     const remainingDays = totalDays % 7; // সপ্তাহ বাদে বাকি দিন
-     const totalMonths = (years * 12) + months; // মোট মাস হিসাব
+     const remainingDays = totalDays % 7;
+     const totalMonths = (years * 12) + months;
      const totalHours = totalDays * 24;
      const totalMinutes = totalHours * 60;
      const totalSeconds = totalMinutes * 60;
